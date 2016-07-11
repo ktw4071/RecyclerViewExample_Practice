@@ -42,6 +42,7 @@ public class TARARecyclerViewAdapter extends RecyclerView.Adapter<TARARecyclerVi
     @Override
     public void onBindViewHolder(TARAViewHolder holder, int position) {
         final TARAValueObject valueObject = memberList.get(position);
+        // memberImage 리소스가 Drawable 대신 int 값으로 접근가능하다(?)
         holder.memberImage.setImageResource(valueObject.memberImage);
         holder.memberName.setText(valueObject.memberName);
         holder.memberImage.setOnTouchListener(new View.OnTouchListener(){
